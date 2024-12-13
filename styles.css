@@ -1,0 +1,301 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: rgba(40, 167, 69, 0.8);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    animation: breathing 3s ease-in-out infinite;
+    position: fixed; /* 固定在顶部 */
+    top: 0; /* 距离顶部 0 像素 */
+    left: 0; /* 从左侧开始 */
+    width: 100%; /* 宽度为 100% */
+    z-index: 1000; /* 确保在其他元素之上 */
+}
+
+@keyframes breathing {
+    0%, 100% {
+        background: rgba(40, 167, 69, 0.8);
+    }
+    50% {
+        background: rgba(9, 189, 51, 0.5);
+    }
+}
+header i, header span {
+    color: #fff;
+    font-size: 30px;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+header i:hover ,header span:hover{
+    color: #17a2b8;
+}
+h1 {
+    text-align: center;
+    font-size: 2em; /* 字体大小 */
+    color: #4CAF50; /* 字体颜色 */
+    margin: 20px 0; /* 上下外边距 */
+}
+h2 {
+    text-align: center;
+    font-size: 1.5em; /* 字体大小 */
+    color: #4CAF50; /* 字体颜色 */
+    margin: 20px 0; /* 上下外边距 */
+}
+
+ul {
+    list-style-type: none; /* 去掉默认的列表符号 */
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    position: relative;
+    background: #f5f5f5; /* 背景色 */
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px; /* 圆角 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影 */
+    transition: all 0.3s ease; /* 动画过渡 */
+}
+
+ul li:hover {
+    background: #4CAF50; /* Hover 背景色 */
+    color: white; /* Hover 文字颜色 */
+    transform: scale(1.05); /* 增大列表项 */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Hover 阴影效果 */
+}
+
+ul li::before {
+    content: '\2022'; /* 使用 Unicode 圆点符号作为自定义图标 */
+    font-size: 25px;
+    color: #4CAF50; /* 图标颜色 */
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+ul li a {
+    color: inherit; /* 保持与 li 相同的文字颜色 */
+    text-decoration: none; /* 去除链接下划线 */
+    display: block;
+    font-weight: 600; /* 加粗字体 */
+}
+
+ul li a:hover {
+    text-decoration: underline; /* Hover 下划线 */
+}
+
+/* 小屏幕优化 */
+@media (max-width: 768px) {
+    ul li {
+        padding: 10px 15px; /* 减小内边距 */
+    }
+
+    ul li::before {
+        font-size: 20px; /* 缩小图标 */
+        left: -20px; /* 调整图标位置 */
+    }
+}
+.container {
+    display: flex;
+    margin: 20px;
+    margin-top: 100px;
+}
+
+.sidebar {
+    background: #fff;
+    padding: 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed; /* 固定在顶部 */
+    top: 20%; /* 距离顶部 0 像素 */
+    left: 0; /* 从左侧开始 */
+    width: 2%; /* 宽度为 100% */
+    z-index: 999; /* 确保在其他元素之上 */
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style:none;
+    padding: -2px;
+}
+
+.sidebar ul li {
+    margin:0 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+#share {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 10px;
+    font-size: 20px;
+}
+main {
+    flex-grow: 1;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.features ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.social-media a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.download-button {
+    display: inline-block;
+    background: #28a745;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #28a745;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}
+
+#intro {
+    text-align: center; /* 使文本和视频居中 */
+}
+
+.video-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    overflow: hidden; /* 防止视频溢出 */
+}
+
+.video {
+    max-width: 50%; /* 视频最大宽度为 80% */
+    max-height: 50%; /* 视频最大高度为 80% */
+    object-fit: contain; /* 保持比例缩放 */
+}
+
+/* 给每个section添加间隔和虚线边框 */
+section {
+    margin: 40px 0; /* 在每个section上下添加间隔 */
+    padding: 20px; /* 内边距，给内容一些呼吸空间 */
+    border-bottom: 2px dashed #dcdcdc; /* 添加淡灰色虚线 */
+}
+
+/* 侧边栏导航 */
+aside.sidebar {
+    background-color: #f4f4f4; /* 背景颜色 */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 修饰社交媒体按钮的样式 */
+.social-media a {
+    display: inline-block;
+    margin: 10px;
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #007bff; /* 鼠标悬停时变色 */
+}
+
+/* 视频容器 */
+.video-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.video-container .video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* 表单样式 */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input, form textarea, form button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+h1 i, h2 i {
+    margin-right: 10px;     /* 图标与文本之间的间距 */
+    color: #007bff;         /* 图标颜色，保持统一 */
+}
+
+p {
+    text-align: center;
+}
+
+

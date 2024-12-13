@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="高精度计算器，提供强大的计算功能，满足您的所有计算需求。">
+    <meta name="keywords" content="计算器, 高精度, 数学工具, 科学计算">
+
+    <title>高精度计算器</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 引入CSS样式 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- 引入字体图标 -->
+</head>
+
+<script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault(); // 防止默认提交
+        alert('感谢您的反馈！我们会尽快联系您。');
+        this.reset(); // 重置表单
+    });
+    function shareToWeChat() {
+        alert("请使用微信扫描二维码分享此链接。");
+        // 这里可以添加生成二维码的功能，或使用第三方库生成二维码
+    }
+</script>
+    
+<body>
+    <header>
+        
+        <i class="fas fa-plus"></i>  <!-- 加法 -->
+        <i class="fas fa-minus"></i> <!-- 减法 -->
+        <i class="fas fa-times"></i> <!-- 乘法 -->
+        <i class="fas fa-divide"></i> <!-- 除法 -->
+        <i class="fas fa-superscript"></i> <!-- 幂运算 -->
+        <span>sin</span>  <!-- 正弦 -->
+        <span>cos</span>  <!-- 余弦 -->
+        <i class="fas fa-square-root-alt"></i>  <!-- 根号 -->
+    </header>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <h2>导航</h2>
+            <ul>
+                <li><a href="#background">背景</a></li>
+                <li><a href="#showcase">展示</a></li>
+                <li><a href="#share">分享</a></li>
+                <li><a href="#contact">联系</a></li>
+                <li><a href="#download">下载</a></li>
+            </ul>
+        </aside>
+        
+        <main>
+            <section id="intro">
+                <h1><i class="fas fa-calculator"></i>高精度计算器</h1>
+                <h3>体验最强大的高精度计算工具，满足您的计算需求。</h3>
+                
+            </section>
+            
+
+            <section id="background">
+                <h2><i class="fas fa-info-circle"></i>背景</h2>
+                <p>高精度计算器的设计初衷是为了满足科学研究、工程计算以及高等数学等领域对于计算精度的严格要求。我们希望通过这个工具，帮助用户更高效、准确地完成各类计算任务。</p>
+            </section>
+
+            <section id="showcase">
+                <h2><i class="fas fa-desktop"></i>展示</h2>
+                <div class="features">
+                    
+                    <div class="video-container">
+                        <video class="video" autoplay loop muted>
+                            <source src="show.mp4" type="video/mp4"> <!-- 视频展示 -->
+                            您的浏览器不支持视频标签。
+                        </video>
+                    </div>
+                    <h3>功能特点</h3>
+                    <ul>
+                        <li>支持任意精度的浮点运算</li>
+                        <li>强大的数学函数库</li>
+                        <li>简洁友好的界面设计</li>
+                        <li>实时计算和结果展示</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="share">
+                <h2><i class="fas fa-share-alt"></i>分享</h2>
+                <p>如果你喜欢我的高精度计算器，请分享给你的朋友和同事！</p>
+                <div class="social-media">
+                    <a href="https://service.weibo.com/share/share.php?url=yourwebsite.com&title=我在这里找到一个高精度计算器！"><i class="fab fa-weibo"></i> 微博</a>
+                    <a href="https://qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=yourwebsite.com&title=我在这里找到一个高精度计算器！"><i class="fab fa-qq"></i> QQ空间</a>
+                    <a href="javascript:void(0);" onclick="shareToWeChat()"><i class="fab fa-weixin"></i> 微信</a>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2><i class="fas fa-envelope"></i>联系我</h2>
+                <p>如有任何问题或建议，请随时联系我：</p>
+                <form action="send_email.php" method="post">
+                    <label for="name">姓名:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">电子邮箱:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">信息:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">发送</button>
+                </form>
+            </section>
+
+            <section id="download">
+                <h2><i class="fas fa-download"></i>下载使用</h2>
+                <p>点击下面的链接下载高精度计算器：</p>
+                <a href="download_link.exe" class="download-button">下载高精度计算器</a>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 高精度计算器by lzbj. 保留所有权利.</p>
+    </footer>
+</body>
+</html>
